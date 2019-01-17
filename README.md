@@ -8,11 +8,18 @@ Install dependencies:
 ```
 pip install -r requirements.txt
 
-``` 
+```
+
+Prepare database:
+
+```
 
 python manage.py makemigrations 
 ...
 python manage.py migrate
+```
+
+
 ```
 
 Run application locally:
