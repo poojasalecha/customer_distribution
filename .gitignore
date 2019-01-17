@@ -1,0 +1,16 @@
+*.py[cod]
+.*
+!.gitignore
+*.log
+*.pot
+*.pyc
+local_settings.py
+__pycache__/
+build/
+dist/
+*\.egg*
+# data
+/venv/
+!**/__init__.py
+**/migrations/*.py
+**/migrations/*.pyc

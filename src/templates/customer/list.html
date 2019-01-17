@@ -1,0 +1,35 @@
+{% extends "customer/base.html" %}
+{% block title %}Customers Data{% endblock %}
+{% block body_class %}body-orders{% endblock %}
+{% block menu_customer_class %}active{% endblock %}
+{% block content %}
+<style type="text/css">
+  .main {
+    margin-left: 200px;
+    font-size: 16px;
+    padding: 0px 0px;
+  }
+</style>
+<div class = "card">
+  <table class="table table-striped" style="border: 0.05rem gray solid;">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>No of Orders</th>
+        </tr>
+      </thead>
+      {% for key, value in customer_order_count %}    
+      <tbody>
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{key}}</td>
+          <td>{{value.ordered_amount}}</td>
+          <td>{{ value.count}}</td>
+        </tr>
+      </tbody>
+      {% endfor %}
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    {% block title %}
+    Honey Badger Labs
+    {% endblock %}
+  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body {
+    line-height: 1.5;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .87);
+}
+.main {
+    margin-left: 200px;
+    font-size: 12px;
+    padding: 0px 10px;
+}
+.sidenav {
+  height: 100%;
+  width: 183px;
+  position: fixed;
+  z-index: 1;
+  top: 52px;
+  left: 0;
+  background-color: #efe8e8;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 37px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #0c0c0c;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Honey Badger Labs</a>
+    </div>
+  </div>
+</nav>
+<div class="sidenav">
+  <a href="{% url 'customer:customer-data' %}">List</a>
+</div>
+
+<main class="main">
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+   
+</body>
+</html> 
