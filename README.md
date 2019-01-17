@@ -19,9 +19,6 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-
-```
-
 Run application locally:
 
 ```
