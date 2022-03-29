@@ -53,7 +53,7 @@ numexpr==2.4.3
 numpy==1.14.2
 openpyxl==2.3.0
 pandas==0.22.0
-paramiko==1.16.0
+paramiko==2.10.1
 patsy==0.4.1
 pbr==1.8.0
 pexpect==4.0.1
